@@ -23,7 +23,7 @@ export default function Navbar({ activePage, setActivePage }) {
   const handleNavClick = (id) => {
     setActivePage(id);
     setMobileMenuOpen(false);
-    if (id !== 'about' && id !== 'works') {
+    if (id !== 'about' && id !== 'works' && id !== 'contact') {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   };

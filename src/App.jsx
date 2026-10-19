@@ -4,14 +4,13 @@ import Footer from './components/Footer';
 import ProjectModal from './components/ProjectModal';
 import HomePage from './pages/HomePage';
 import ServicesPage from './pages/ServicesPage';
-import ContactPage from './pages/ContactPage';
 
 export default function App() {
   const [activePage, setActivePage] = useState('home');
   const [selectedProject, setSelectedProject] = useState(null);
 
   const handleNavigate = (pageId) => {
-    if (pageId === 'about' || pageId === 'works') {
+    if (pageId === 'about' || pageId === 'works' || pageId === 'contact') {
       if (activePage !== 'home') {
         setActivePage('home');
         setTimeout(() => {
@@ -43,9 +42,6 @@ export default function App() {
           <ServicesPage 
             onNavigate={handleNavigate} 
           />
-        )}
-        {activePage === 'contact' && (
-          <ContactPage />
         )}
       </main>
 

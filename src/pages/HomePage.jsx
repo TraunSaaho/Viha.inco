@@ -6,6 +6,7 @@ import SelectedWorkSection from '../components/SelectedWorkSection';
 import WorksGridSection from '../components/WorksGridSection';
 import AboutSection from '../components/AboutSection';
 import CapabilitiesSection from '../components/CapabilitiesSection';
+import ContactSection from '../components/ContactSection';
 
 export default function HomePage({ onNavigate, onSelectProject }) {
   return (
@@ -43,6 +44,11 @@ export default function HomePage({ onNavigate, onSelectProject }) {
       {/* 7. Our Capabilities — 4-phase step cards */}
       <div className="relative z-20 bg-black">
         <CapabilitiesSection />
+      </div>
+
+      {/* 8. Get in Touch — inline contact section (no separate page) */}
+      <div className="relative z-20 bg-black">
+        <ContactSection />
       </div>
     </div>
   );

@@ -61,7 +61,7 @@ export default function WorksGridSection({ onSelectProject, onNavigate }) {
           </div>
           
           <h2 className="text-4xl sm:text-6xl lg:text-7xl font-display font-extrabold tracking-tight text-white leading-tight">
-            Selected Works
+            Works
           </h2>
           
           <p className="mt-4 text-base sm:text-lg text-white/60 leading-relaxed font-normal">

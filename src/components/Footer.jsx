@@ -74,7 +74,7 @@ export default function Footer({ onNavigate }) {
               </li>
               <li>
                 <button 
-                  onClick={() => { onNavigate('contact'); scrollToTop(); }}
+                  onClick={() => onNavigate('contact')}
                   className="hover:text-white transition-colors cursor-pointer"
                 >
                   Get in Touch
