@@ -140,9 +140,6 @@ export default function CapabilitiesSection() {
             <div className="inline-flex items-center justify-center py-2 px-6 sm:px-8 border-t border-b border-white/25 text-white/90 text-xs sm:text-sm md:text-[15px] font-light tracking-[0.22em] uppercase bg-black/80 backdrop-blur-md">
               OUR CAPABILITIES
             </div>
-            <div className="text-xs font-mono text-white/40 tracking-widest hidden sm:block bg-black/80 backdrop-blur-md px-3.5 py-1.5 border border-white/10 rounded-full">
-              04 PHASES
-            </div>
           </div>
         </div>
 

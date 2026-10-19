@@ -1,20 +1,17 @@
 import React, { useState } from 'react';
-import { Mail, Check, Copy, ArrowUpRight, Clock, MapPin, Send } from 'lucide-react';
+import { Mail, Check, Copy, Clock, MapPin, Send } from 'lucide-react';
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     service: 'UI/UX Design',
-    budget: '$10k - $25k',
     message: ''
   });
   const [submitted, setSubmitted] = useState(false);
   const [copied, setCopied] = useState(false);
 
   const services = ['Brand Identity', 'UI/UX Design', 'Web Development', 'Design System', 'Full Product'];
-  const budgets = ['< $10k', '$10k - $25k', '$25k - $50k', '$50k+'];
-
   const handleSubmit = (e) => {
     e.preventDefault();
     setSubmitted(true);
@@ -69,9 +66,6 @@ export default function ContactSection() {
               Get in Touch
             </div>
 
-            <div className="text-xs font-mono text-white/40 tracking-widest hidden sm:block">
-              04 CHANNELS
-            </div>
           </div>
 
           <div className="max-w-3xl">
@@ -84,12 +78,12 @@ export default function ContactSection() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch">
 
           {/* Left Side: Contact Information & Direct Access */}
-          <div className="lg:col-span-5 space-y-8">
+          <div className="lg:col-span-5 h-full">
 
-            <div className="glass-card p-8 rounded-3xl border border-white/10 space-y-6">
+            <div className="glass-card p-8 rounded-3xl border border-white/10 space-y-6 h-full">
               <h3 className="text-xl font-display font-bold text-white">Direct Communication</h3>
 
               {/* Quick copy email box */}
@@ -100,7 +94,7 @@ export default function ContactSection() {
                   </div>
                   <div>
                     <span className="text-xs text-white/40 block">Email Us</span>
-                    <span className="text-sm font-semibold text-white">tarunsaahomac@gmail.com</span>
+                    <span className="text-sm font-semibold text-white">hello@viha.studio</span>
                   </div>
                 </div>
                 <button
@@ -136,56 +130,11 @@ export default function ContactSection() {
               </div> */}
             </div>
 
-            {/* Social Links */}
-            <div className="glass-card p-6 rounded-3xl border border-white/10">
-              <span className="text-xs font-semibold uppercase tracking-wider text-white/40 block mb-4">
-                Connect Across Channels
-              </span>
-              <div className="flex flex-col gap-2.5 text-sm">
-                <a
-                  href="https://dribbble.com"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="flex items-center justify-between p-2.5 rounded-xl hover:bg-white/5 text-white/70 hover:text-white transition-colors"
-                >
-                  <span>Dribbble</span>
-                  <ArrowUpRight className="w-4 h-4" />
-                </a>
-                <a
-                  href="https://behance.net"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="flex items-center justify-between p-2.5 rounded-xl hover:bg-white/5 text-white/70 hover:text-white transition-colors"
-                >
-                  <span>Behance</span>
-                  <ArrowUpRight className="w-4 h-4" />
-                </a>
-                <a
-                  href="https://linkedin.com"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="flex items-center justify-between p-2.5 rounded-xl hover:bg-white/5 text-white/70 hover:text-white transition-colors"
-                >
-                  <span>LinkedIn</span>
-                  <ArrowUpRight className="w-4 h-4" />
-                </a>
-                <a
-                  href="https://twitter.com"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="flex items-center justify-between p-2.5 rounded-xl hover:bg-white/5 text-white/70 hover:text-white transition-colors"
-                >
-                  <span>X (Twitter)</span>
-                  <ArrowUpRight className="w-4 h-4" />
-                </a>
-              </div>
-            </div>
-
           </div>
 
           {/* Right Side: Interactive Project Inquiry Form */}
-          <div className="lg:col-span-7">
-            <div className="glass-card p-8 sm:p-10 rounded-3xl border border-white/10">
+          <div className="lg:col-span-7 h-full">
+            <div className="glass-card p-8 sm:p-10 rounded-3xl border border-white/10 h-full">
 
               {submitted ? (
                 <div className="text-center py-12 space-y-4">
@@ -259,29 +208,6 @@ export default function ContactSection() {
                           }`}
                         >
                           {srv}
-                        </button>
-                      ))}
-                    </div>
-                  </div>
-
-                  {/* Budget Range Pills */}
-                  <div>
-                    <label className="block text-xs font-semibold uppercase tracking-wider text-white/60 mb-2.5">
-                      Project Budget (USD)
-                    </label>
-                    <div className="flex flex-wrap gap-2">
-                      {budgets.map((b) => (
-                        <button
-                          type="button"
-                          key={b}
-                          onClick={() => setFormData({ ...formData, budget: b })}
-                          className={`px-4 py-2 rounded-full text-xs font-medium transition-all cursor-pointer ${
-                            formData.budget === b
-                              ? 'bg-white text-black font-semibold shadow-md'
-                              : 'bg-white/5 hover:bg-white/10 text-white/70 border border-white/5'
-                          }`}
-                        >
-                          {b}
                         </button>
                       ))}
                     </div>

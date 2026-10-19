@@ -1,6 +1,6 @@
 import React from 'react';
 import { ArrowUpRight } from 'lucide-react';
-import logoImg from '../assets/logo.png';
+import logoCardImg from '../assets/logocard.png';
 
 export default function AboutSection({ onNavigate }) {
   return (
@@ -98,33 +98,12 @@ export default function AboutSection({ onNavigate }) {
 
             {/* Right Emblem Card Column */}
             <div className="lg:col-span-5 flex justify-center">
-              <div className="relative w-64 h-64 sm:w-72 sm:h-72 rounded-3xl p-6 bg-gradient-to-tr from-purple-900/35 via-pink-900/20 to-black/90 border border-white/15 flex flex-col items-center justify-center text-center shadow-[0_20px_50px_rgba(0,0,0,0.9)] group transition-transform duration-500 hover:scale-105">
-                
-                {/* Viha Logo Symbol */}
-                <div className="w-24 h-24 mb-4 flex items-center justify-center">
-                  <img 
-                    src={logoImg} 
-                    alt="Viha Symbol" 
-                    className="w-full h-full object-contain filter drop-shadow-[0_4px_24px_rgba(255,255,255,0.45)] select-none" 
-                    draggable={false}
-                  />
-                </div>
-                
-                <span className="font-display font-bold text-lg text-white tracking-wide">
-                  Viha Studio
-                </span>
-                
-                <span className="text-xs text-white/50 mt-1 font-mono tracking-wider">
-                  Design &amp; Engineering
-                </span>
-                
-                {/* Status Pill */}
-                <span className="mt-4 inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-[11px] font-medium tracking-wide">
-                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-                  <span>Active Worldwide</span>
-                </span>
-
-              </div>
+              <img
+                src={logoCardImg}
+                alt="Viha Studio logo card"
+                className="w-64 h-64 sm:w-72 sm:h-72 object-contain rounded-3xl select-none"
+                draggable={false}
+              />
             </div>
 
           </div>

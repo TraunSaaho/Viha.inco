@@ -3,7 +3,6 @@ import Hero from '../components/Hero';
 import BrandStatementSection from '../components/BrandStatementSection';
 import WhatWeDoSection from '../components/WhatWeDoSection';
 import SelectedWorkSection from '../components/SelectedWorkSection';
-import WorksGridSection from '../components/WorksGridSection';
 import AboutSection from '../components/AboutSection';
 import CapabilitiesSection from '../components/CapabilitiesSection';
 import ContactSection from '../components/ContactSection';
@@ -31,22 +30,17 @@ export default function HomePage({ onNavigate, onSelectProject }) {
         <SelectedWorkSection onNavigate={onNavigate} onSelectProject={onSelectProject} />
       </div>
 
-      {/* 5. Continuation Section: Selected Works Portfolio Grid */}
-      <div id="works" className="relative z-20 bg-black">
-        <WorksGridSection onSelectProject={onSelectProject} onNavigate={onNavigate} />
-      </div>
-
-      {/* 6. Continuation Section: About Viha Studio */}
+      {/* 5. Continuation Section: About Viha Studio */}
       <div id="about" className="relative z-20 bg-black">
         <AboutSection onNavigate={onNavigate} />
       </div>
 
-      {/* 7. Our Capabilities — 4-phase step cards */}
+      {/* 6. Our Capabilities — 4-phase step cards */}
       <div className="relative z-20 bg-black">
         <CapabilitiesSection />
       </div>
 
-      {/* 8. Get in Touch — inline contact section (no separate page) */}
+      {/* 7. Get in Touch — inline contact section (no separate page) */}
       <div className="relative z-20 bg-black">
         <ContactSection />
       </div>

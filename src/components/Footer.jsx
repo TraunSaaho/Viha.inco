@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowUp, Github, Twitter, Linkedin, Dribbble, Instagram } from 'lucide-react';
+import { ArrowUp, Twitter, Linkedin, Dribbble, Instagram } from 'lucide-react';
 
 export default function Footer({ onNavigate }) {
   const scrollToTop = () => {
@@ -27,13 +27,6 @@ export default function Footer({ onNavigate }) {
             <p className="text-sm text-white/50 max-w-sm leading-relaxed">
               Crafting premium digital products, modern brand identities, and memorable web experiences for ambitious founders and brands worldwide.
             </p>
-            <div className="pt-2 flex items-center gap-3">
-              <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
-              </span>
-              <span className="text-xs text-white/60">Taking on projects for Q2 / Q3</span>
-            </div>
           </div>
 
           {/* Col 2: Navigation Links */}
@@ -113,15 +106,6 @@ export default function Footer({ onNavigate }) {
                 aria-label="Dribbble"
               >
                 <Dribbble className="w-4 h-4" />
-              </a>
-              <a 
-                href="https://github.com" 
-                target="_blank" 
-                rel="noreferrer"
-                className="p-2.5 rounded-lg bg-white/5 border border-white/10 hover:border-white/30 text-white/60 hover:text-white transition-colors"
-                aria-label="GitHub"
-              >
-                <Github className="w-4 h-4" />
               </a>
               <a 
                 href="https://instagram.com" 
